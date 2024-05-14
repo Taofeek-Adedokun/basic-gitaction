@@ -1,11 +1,8 @@
-name: Output information
-on:
-  push:
-    branches:
-      - main 
+name: Output event details
+on: issues 
 jobs:
-  info:
+  info: 
     runs-on: ubuntu-latest
     steps:
-       - name: Output Github context
+       - name: Output event details
          run: echo "${{ toJson(github.event) }}"
